@@ -11,6 +11,7 @@ import { useRef } from "react";
 import { degToRad } from "three/src/math/MathUtils.js";
 import { Cook } from "./Cook";
 import { foodAtom, foodItems } from "./Menu";
+import { Chaos } from "./Chaos";
 
 const FOOD_SPACING = 2.5;
 
@@ -46,8 +47,9 @@ export const Experience = () => {
   const isMobile = window.innerWidth < 1024; // 1024 is the breakpoint for mobile devices (LG tailwind)
   return (
     <>
+      <Chaos />
       {/* RESTAURANT */}
-      <group scale={restaurantScalingFactor} rotation-y={degToRad(-30)}>
+      {/* <group scale={restaurantScalingFactor} rotation-y={degToRad(-30)}>
         <Gltf src="models/Restaurant.glb" scale={0.18} castShadow />
         <AccumulativeShadows
           temporal
@@ -72,7 +74,7 @@ export const Experience = () => {
             position={[-5, 5, -9]}
           />
         </AccumulativeShadows>
-      </group>
+      </group> */}
 
       {/* CHEF */}
       <group
